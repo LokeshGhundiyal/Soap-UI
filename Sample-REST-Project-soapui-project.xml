@@ -93,10 +93,10 @@
         <con:settings/>
         <con:config service="Account creation" resourcePath="/accountcreation" methodName="Register a new account - viewAccountRegistration" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="View Form" mediaType="application/json" id="41ac028e-3cf8-415f-bcbc-e0a406475897">
-            <con:settings/>
+            <con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings>
             <con:endpoint>http://localhost:8080</con:endpoint>
             <con:request/>
-            <con:credentials>
+            <con:originalUri>http://localhost/accountcreation</con:originalUri><con:credentials>
               <con:authType>No Authorization</con:authType>
             </con:credentials>
             <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
@@ -121,7 +121,7 @@
           </con:restRequest>
         </con:config>
       </con:testStep>
-      <con:properties/>
+      <con:testStep type="groovy" name="Groovy Script" id="9a83222f-c786-44e2-a588-666115a1f287"><con:settings/><con:config><script>log.info (" hello world ............");</script></con:config></con:testStep><con:properties/>
     <con:reportParameters/></con:testCase>
     <con:properties/>
   <con:reportParameters/></con:testSuite>
